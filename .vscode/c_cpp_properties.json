@@ -8,8 +8,8 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICan/include",
-                "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICan/src",
+                "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICAN/include",
+                "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICAN/src",
                 "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src",
                 "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src",
                 "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include",
@@ -55,8 +55,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICan/include",
-                    "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICan/src",
+                    "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICAN/include",
+                    "/home/xynogen/Pekerjaan/IOT/ICAN/SwitchICAN/src",
                     "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src",
                     "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src",
                     "/home/xynogen/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include",
@@ -101,7 +101,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=50201",
+                "PLATFORMIO=50204",
                 "ESP8266",
                 "ARDUINO_ARCH_ESP8266",
                 "ARDUINO_ESP8266_NODEMCU_ESP12E",

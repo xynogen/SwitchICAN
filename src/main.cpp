@@ -8,11 +8,8 @@
 #define STAPSK "complexity"
 #endif
 
-
-#define RPWMML D5
-#define LPWMML D6
-#define RPWMMR D7
-#define LPWMMR D8
+#define RPWM D5
+#define LPWM D6
 #define EN D2
 #define SERVO D4
 #define POMPA1 D0
@@ -28,7 +25,7 @@ int SW2;
 int SW3;
 
 // Set Static IP Configuration
-IPAddress local_IP(192, 168, 0, 103);
+IPAddress local_IP(192, 168, 0, 101);
 IPAddress gateway(192, 168, 0, 1);
 IPAddress subnet(255, 255, 255, 0);
 
@@ -44,10 +41,8 @@ void setup()
   SW3 = 1;
   Serial.begin(115200);
   pinMode(SERVO,OUTPUT);
-  pinMode(RPWMML,OUTPUT);
-  pinMode(LPWMML,OUTPUT);
-  pinMode(RPWMMR,OUTPUT);
-  pinMode(LPWMML,OUTPUT);
+  pinMode(RPWM,OUTPUT);
+  pinMode(LPWM,OUTPUT);
   pinMode(EN,OUTPUT);
   pinMode(POMPA1, OUTPUT);
   pinMode(POMPA2, OUTPUT);
@@ -130,20 +125,17 @@ void loop()
   {
     SW1 = 0;
     digitalWrite(EN, HIGH);
-    analogWrite(RPWMML, 255);
-    analogWrite(LPWMML, 0);
-    analogWrite(RPWMMR, 255);
-    analogWrite(LPWMMR, 0);
+    analogWrite(RPWM, 255);
+    analogWrite(LPWM, 0);
   }
+  
   
   else if (req.indexOf(F("/SW/1/1")) != -1)
   {
     SW1 = 1;
     digitalWrite(EN, LOW);
-    analogWrite(RPWMML, 0);
-    analogWrite(LPWMML, 0);
-    analogWrite(RPWMMR, 0);
-    analogWrite(LPWMMR, 0);
+    analogWrite(RPWM, 0);
+    analogWrite(LPWM, 0);
   }
   
   else if (req.indexOf(F("/SW/2/0")) != -1)
